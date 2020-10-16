@@ -7,7 +7,7 @@ balance = theBalance;
 }
 
 public  String toString() {
-  return("The card has " + balance + " dollars.");
+  return("The card has " + balance + " dollars");
 }
 
 public double getBalance(){
