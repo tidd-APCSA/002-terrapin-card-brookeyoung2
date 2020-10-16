@@ -15,11 +15,15 @@ public double getBalance(){
 }
 
 public void payEconomical() {
-balance = balance - 2.50;
+  if(balance > 2.50){
+    balance = balance - 2.50;
+  }
 }
 
 public void payGourmet() {
-balance = balance - 4.00;
+  if(balance > 4.00){
+    balance = balance - 4.00;
+  }
 }
 public void loadMoney(double amount) {
   if (amount > 0){
