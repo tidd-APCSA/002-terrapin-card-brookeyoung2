@@ -1,3 +1,5 @@
+import javax.crypto.AEADBadTagException;
+
 public class CardRunner {
 
 public static void main(String args[]){
@@ -17,15 +19,27 @@ System.out.println(card);
 
   card.payGourmet();
   System.out.println(card);
+  System.out.println();
+  TerrapinCard add = new TerrapinCard(10);
+  System.out.println(add);
 
-  card.loadMoney(15);
-  System.out.println(card);
+  add.loadMoney(15);
+  System.out.println(add);
 
-  card.loadMoney(10);
-  System.out.println(card);
+  add.loadMoney(10);
+  System.out.println(add);
 
-  card.loadMoney(200);
-  System.out.println(card);
+  add.loadMoney(200);
+  System.out.println(add);
+  System.out.println();
+
+  TerrapinCard lunch = new TerrapinCard(5);
+  System.out.println(lunch);
+  lunch.payGourmet();
+  System.out.println(lunch);
+  lunch.payGourmet();
+  System.out.println(lunch);
+  System.out.println();
 
   TerrapinCard card2 = new TerrapinCard (10);
   System.out.println("Billy: " + card2);
@@ -49,9 +63,7 @@ cardBrian.loadMoney(50);
 System.out.println("Billy: The card has " + cardBilly.getBalance() + " dollars");
 System.out.println("Brian: The card has " + cardBrian.getBalance() + " dollars");
 
-
-
-
+System.out.println(card.getBalance());
 
 
 
